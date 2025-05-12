@@ -86,9 +86,8 @@ app.put('/insults/:id', (request, response) => {
         if(insult && play) {
             insults.map(i => {
                 if(i.id === parseInt(id)) {
-                    i.id = parseInt(id);
-                    i.play = play;
                     i.insult = insult;
+                    i.play = play;
                 }
             });
             response.status(201).json({
